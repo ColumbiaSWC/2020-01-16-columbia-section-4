@@ -1,20 +1,21 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-latitude: "45"     # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"    # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+venue: "Columbia University"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Butler Library, 535 West 114th Street"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+latitude: "40.806180"     # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-73.963330"    # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "January 16-17, 2020"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:00 - 4:30"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2020-01-16      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2020-01-17        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Rob Lane", "Alan Croswell", "Teddy Thomas"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: []     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["rcfoundations@columbia.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+section: 1
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -29,18 +30,15 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% endcomment %}
 
 
+## Welcome!
 
-{% comment %}
-For a workshop please delete the following block
-{% endcomment %}
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to customize your
-own website. If you are running a self-organized workshop or have not put in a
-workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know
-about your workshop and our administrator may contact you if we need any extra
-information.
-</div>
+This is the landing site for Columbia's [Foundations for Research Computing](https://rcfoundations.research.columbia.edu/) August Bootcamp, section {{ page.section }}.
+
+While Python is a large part of the bootcamp, it is not the exclusive focus. Our goal is to get you started in applying computational methods in your research processes. This means we'll also cover the [UNIX shell](#syllabus-shell) and [Git](#syllabus-git) in addition to Python in order to develop fundamental and widely applicable skills. This workshop is intended for novices; no prior experience in working with computer programming is presumed.
+
+Below you'll find the schedule, syllabus, and setup instructions to go over before the bootcamp begins__, as well as more information about the [Software Carpentries](https://software-carpentry.org/) curriculum.
+
+
 
 {% comment %}
 Check DC curriculum
@@ -73,7 +71,8 @@ displayed if the 'eventbrite' field in the header is not set.
 {% endif %}
 
 
-<h2 id="general">General Information</h2>
+<h2 id="general">Software Carpentry Curriculum Information
+</h2>
 
 {% comment %}
 INTRODUCTION
@@ -294,22 +293,7 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to the software described below.
-  In addition, you will need an up-to-date web browser.
-</p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+	Please install the following software before participating in the bootcamp. You might also find this <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">list of common issues</a> useful.
 </p>
 
 {% if site.carpentry == "swc" %}
